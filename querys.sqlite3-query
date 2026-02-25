@@ -1,0 +1,17 @@
+-- database: ./database.db
+
+-- Use the ▷ button in the top right corner to run the entire file.
+
+-- All bikes
+SELECT * FROM Bikes;
+
+-- All bikes andthe maker
+SELECT makers.name,Bikes.model FROM Bikes
+JOIN makers ON makers.MakerID=Bikes.MakerID;
+
+--bikes of one make   
+SELECT Bikes.model FROM Bikes
+JOIN makers ON makers.MakerID=Bikes.MakerID
+WHERE makers.name="Yamaha";
+
+
