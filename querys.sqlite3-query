@@ -14,4 +14,7 @@ SELECT Bikes.model FROM Bikes
 JOIN makers ON makers.MakerID=Bikes.MakerID
 WHERE makers.name="Yamaha";
 
-
+--just id, maker, model and image url
+SELECT Bikes.BikeID,makers.name,Bikes.model,Bikes.ImageURL
+FROM Bikes
+JOIN makers ON makers.MakerID=Bikes.MakerID;

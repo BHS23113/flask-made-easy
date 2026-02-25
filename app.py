@@ -27,8 +27,10 @@ def query_db(query, args=(), one=False):
 
 @app.route('/')
 def home():
-    #home page
-    sql = "SELECT * FROM Bikes;"
+    #home page- just the ID, maker, model and image url
+    sql = """SELECT Bikes.BikeID,makers.name,Bikes.model,Bikes.ImageURL
+             FROM Bikes
+             JOIN makers ON makers.MakerID=Bikes.MakerID;"""
     results = query_db(sql)
     return str(results)
 
