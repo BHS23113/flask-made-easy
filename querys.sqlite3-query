@@ -18,3 +18,7 @@ WHERE makers.name="Yamaha";
 SELECT Bikes.BikeID,makers.name,Bikes.model,Bikes.ImageURL
 FROM Bikes
 JOIN makers ON makers.MakerID=Bikes.MakerID;
+
+--just one bike based on id
+SELECT * FROM Bikes JOIN makers ON makers.MakerIDakerID=Biked.MakerID
+WHERE Bikes.BikeID = 2;
