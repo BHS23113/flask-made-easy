@@ -42,7 +42,7 @@ def bike(id):
     JOIN makers ON makers.MakerID=Bikes.MakerID
     WHERE Bikes.BikeID = ?;"""
     result = query_db(sql,(id,),True)
-    return str(result)
+    return render_template("bike.html", bike=result)
 
 if __name__ == "__main__":
     app.run(debug=True)

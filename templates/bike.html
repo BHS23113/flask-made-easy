@@ -1,7 +1,15 @@
-{{% extends "layout.html" %}}
+{% extends "layout.html" %}
 {% block body %}
 <!-- Just one bike! -->
 <!-- a 2 column grid-->
- 
-
+<div class ="two-column">
+    <img src="{{ bike[6] }}" alt="Image of {{ bike[2] }}">
+    <!-- Bike Information -->
+    <div class="info">
+        <h1>Top Speed: {{ bike[3] }}mph</h1>
+        <h1>Cost: ${{ bike[4] }}</h1>
+        <h1>Description</h1>
+        <h1>{{ bike[5] }}</h1>
+    </div>
+</div>
 {% endblock %}
